@@ -15,6 +15,10 @@ let sub = document.getElementById('sub');
 let zero = document.getElementById('0');
 let decimal = document.getElementById('decimal');
 let equals = document.getElementById('equals');
+let lparen = document.getElementById('l-paren');
+let rparen = document.getElementById('r-paren');
+let power = document.getElementById('power');
+let modulo = document.getElementById('modulo');
 let add = document.getElementById('add');
 
 one.addEventListener('click', () => {
@@ -69,7 +73,18 @@ decimal.addEventListener('click', () => {
         display.textContent += '.';
     }
 });
-
+lparen.addEventListener('click', () => {
+    display.textContent += '(';
+});
+rparen.addEventListener('click', () => {
+    display.textContent += ')';
+});
+power.addEventListener('click', () => {
+    display.textContent += '**';
+});
+modulo.addEventListener('click', () => {
+    display.textContent += '%';
+});
 equals.addEventListener('click', () => {
     display.textContent = eval(display.textContent);
 });
