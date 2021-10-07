@@ -86,5 +86,10 @@ modulo.addEventListener('click', () => {
     display.textContent += '%';
 });
 equals.addEventListener('click', () => {
-    display.textContent = eval(display.textContent);
+    try {
+        display.textContent = eval(display.textContent);
+    } catch {
+        alert('Not a valid operation, ya dingus!');
+        display.textContent = '';
+    }
 });
